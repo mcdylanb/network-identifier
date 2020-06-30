@@ -93,11 +93,13 @@ let data = [
     ]
   }
 ];
+
 const globe = data[0].numbers;
-console.log(data);
-console.log(data[0].network);
-console.log(globe);
-console.log(globe.find(e => e === "0905"));
+const givenNumber = "09255";
+data.forEach(e => {
+  if (e.numbers.includes(givenNumber))
+    console.log(`your number network is ${e.network}`);
+});
 function App() {
   return (
     <div>
