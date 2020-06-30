@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 let data = [
@@ -94,19 +94,32 @@ let data = [
   }
 ];
 
-const globe = data[0].numbers;
-const givenNumber = "09255";
-data.forEach(e => {
-  if (e.numbers.includes(givenNumber))
-    console.log(`your number network is ${e.network}`);
-});
-function App() {
+const App = () => {
+  const [usersNumber, setUsersNumber] = useState("");
+
+  const givenNumber = "09255";
+
+  data.forEach(e => {
+    if (e.numbers.includes(givenNumber))
+      console.log(`your number network is ${e.network}`);
+  });
+
+  const handleNumberChange = e => {
+    console.log(e.target.value);
+    setUsersNumber(e.target.value);
+  };
+
   return (
     <div>
       test
       <p>test again</p>
+      <div>
+        <form action="">
+          <input value={usersNumber} onChange={handleNumberChange} type="" />
+        </form>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
