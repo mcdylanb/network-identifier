@@ -105,7 +105,6 @@ const App = () => {
   });
 
   const handleNumberChange = e => {
-    console.log(e.target.value);
     setUsersNumber(e.target.value);
   };
 
