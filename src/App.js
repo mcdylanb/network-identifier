@@ -97,15 +97,18 @@ let data = [
 const App = () => {
   const [usersNumber, setUsersNumber] = useState("");
 
-  const givenNumber = "09255";
+  const checksUsersNumber = () => {
+    let network = "";
+    data.forEach(e => {
+      if (e.numbers.includes(usersNumber)) network = e.network;
+      console.log(network);
+    });
+    return network;
+  };
 
-  data.forEach(e => {
-    if (e.numbers.includes(givenNumber))
-      console.log(`your number network is ${e.network}`);
-  });
-
-  const handleNumberChange = e => {
-    setUsersNumber(e.target.value);
+  const handleSubmit = e => {
+    e.preventDefault();
+    setUsersNumber(event.target.value);
   };
 
   return (
@@ -113,8 +116,9 @@ const App = () => {
       test
       <p>test again</p>
       <div>
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <input value={usersNumber} onChange={handleNumberChange} type="" />
+          <button type="submit">submit</button>
         </form>
       </div>
     </div>
