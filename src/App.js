@@ -118,8 +118,8 @@ const App = () => {
 
   return (
     <div>
-      test
-      <p>test again</p>
+      <h1>The Network Detector</h1>
+      <p>Identifies what cellular network you are using, only in the PHIL</p>
       <div>
         <input value={usersNumber} onChange={handleSubmit} />
       </div>
