@@ -100,15 +100,20 @@ const App = () => {
   const checksUsersNumber = () => {
     let network = "";
     data.forEach(e => {
-      if (e.numbers.includes(usersNumber)) network = e.network;
-      console.log(network);
+      if (e.numbers.includes(usersNumber)) {
+        network = e.network;
+        console.log(e.networ);
+        console.log(network);
+      }
     });
     return network;
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    setUsersNumber(event.target.value);
+    setUsersNumber(e.target.value);
+    console.log(usersNumber);
+    console.log(checksUsersNumber());
   };
 
   return (
@@ -116,10 +121,7 @@ const App = () => {
       test
       <p>test again</p>
       <div>
-        <form onSubmit={handleSubmit}>
-          <input value={usersNumber} onChange={handleNumberChange} type="" />
-          <button type="submit">submit</button>
-        </form>
+        <input value={usersNumber} onChange={handleSubmit} />
       </div>
     </div>
   );
