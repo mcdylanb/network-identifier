@@ -96,30 +96,30 @@ let data = [
 
 const App = () => {
   const [usersNumber, setUsersNumber] = useState("");
+  const [usersNetwork, setUsersNetwork] = useState("");
 
   const checksUsersNumber = () => {
     let network = "";
     data.forEach(e => {
       if (e.numbers.includes(usersNumber)) {
         network = e.network;
-        console.log(e.networ);
-        console.log(network);
       }
     });
+    setUsersNetwork(network);
     return network;
   };
 
   const handleSubmit = e => {
     e.preventDefault();
     setUsersNumber(e.target.value);
-    console.log(usersNumber);
-    console.log(checksUsersNumber());
+    checksUsersNumber();
   };
 
   return (
     <div>
       <h1>The Network Detector</h1>
       <p>Identifies what cellular network you are using, only in the PHIL</p>
+      <h3>{usersNetwork}</h3>
       <div>
         <input value={usersNumber} onChange={handleSubmit} />
       </div>
