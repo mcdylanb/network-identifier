@@ -31,8 +31,8 @@ const App = ({ data }) => {
   return (
     <div>
       <div >
-        <h2>The Network Detector</h2>
-        <h3>Identifies what cellular network you are using, only in the PHIL</h3>
+        <h3>The Network Detector</h3>
+        <h5>Identifies what cellular network you are using, only in the PHIL</h5>
       </div>
       {/* Users identified Network */} 
       <div>
@@ -41,7 +41,7 @@ const App = ({ data }) => {
       {/* User input form */} 
       <div>
         <form onSubmit={handleSubmit}>
-        <h2>TYPE IN YOUR NUMBER</h2>
+        <h4>TYPE IN YOUR NUMBER</h4>
         <p>PHONE NUMBER</p>
         <div>
           <input value={usersNumber} onChange={handleChangeNumber} />
