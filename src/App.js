@@ -29,8 +29,8 @@ const App = ({ data }) => {
   } 
 
   return (
-    <div>
-      <div >
+    <div className="App">
+      <div className="tittle">
         <h3>The Network Detector</h3>
         <h5>Identifies what cellular network you are using, only in the PHIL</h5>
       </div>
