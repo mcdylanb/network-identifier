@@ -94,7 +94,7 @@ let data = [
   }
 ];
 
-const App = () => {
+const App = ({ data }) => {
   const [usersNumber, setUsersNumber] = useState("");
   const [usersNetwork, setUsersNetwork] = useState("");
 
