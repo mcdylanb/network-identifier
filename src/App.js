@@ -23,6 +23,11 @@ const App = ({ data }) => {
     checksUsersNumber();
   };
 
+  const handleChangeNumber = e => {
+    console.log(e.target.value);
+    setUsersNumber(e.target.value);
+  } 
+
   return (
     <div>
       <div >
@@ -35,9 +40,14 @@ const App = ({ data }) => {
       </div>
       {/* User input form */} 
       <div>
+        <form onSubmit={handleSubmit}>
         <h2>TYPE IN YOUR NUMBER</h2>
         <p>PHONE NUMBER</p>
-        <input value={usersNumber} onChange={handleSubmit} />
+        <div>
+          <input value={usersNumber} onChange={handleChangeNumber} />
+        </div>
+          <div><button type="submit"> Check</button></div>
+        </form>
       </div>
     </div>
   );
