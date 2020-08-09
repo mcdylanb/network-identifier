@@ -12,3 +12,23 @@
 
 } 
 
+.tittle {
+
+  text-align: center;
+} 
+
+.yourNetwork {
+  background-color: #003459;
+  text-align: center;
+  border-radius: 30px;
+} 
+
+.yourNetwork h3{
+  color: #00A7E1;
+} 
+.yourNetwork h1{
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: white;
+} 
+

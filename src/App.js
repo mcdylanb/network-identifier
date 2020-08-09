@@ -35,7 +35,10 @@ const App = ({ data }) => {
         <h5>Identifies what cellular network you are using, only in the PHIL</h5>
       </div>
       {/* Users identified Network */} 
-      <div>
+      <div className="yourNetwork">
+        <h3>
+          your network
+        </h3>
         <h1>{usersNetwork}</h1>
       </div>
       {/* User input form */} 
