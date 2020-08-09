@@ -9,18 +9,21 @@
 
 .tittle h3{
   color: #003459;
+  font-size: 2rem;
+  margin-bottom: 0;
 
 } 
 
 .tittle {
-
   text-align: center;
+  margin-bottom: 2rem;
 } 
 
 .yourNetwork {
   background-color: #003459;
   text-align: center;
   border-radius: 30px;
+  margin-bottom: 2rem;
 } 
 
 .yourNetwork h3{
